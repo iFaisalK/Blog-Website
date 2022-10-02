@@ -12,10 +12,14 @@
         </h1>
         <p id="postContent">
             <%= post.body.substring(0, 100)+"..."%>
-            <a href="posts/<%=post.title%>"<%= post.title %> >read more</a>
+                <a href="posts/<%=post.title%>" <%=post.title %> >read more</a>
         </p>
         <% }) %>
 
+        <form action="/compose" class="button">
+            <button type="submit" class="compose btn btn-info">+</button>
+        </form>
+
+
 
 <%- include('partials/footer') %>
-
